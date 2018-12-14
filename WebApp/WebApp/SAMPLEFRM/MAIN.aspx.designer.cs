@@ -10,51 +10,51 @@
 namespace WebApp.SAMPLEFRM {
     
     
-    public partial class FORM1 {
+    public partial class MAIN {
         
         /// <summary>
-        /// form1 コントロール。
+        /// BtnDialogOpen コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Button BtnDialogOpen;
         
         /// <summary>
-        /// lblAddress1 コントロール。
+        /// BtnDataSet コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddress1;
+        protected global::System.Web.UI.WebControls.Button BtnDataSet;
         
         /// <summary>
-        /// lblAddress2 コントロール。
+        /// txtAddress1 コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddress2;
+        protected global::System.Web.UI.WebControls.TextBox txtAddress1;
         
         /// <summary>
-        /// lblAddress3 コントロール。
+        /// txtAddress2 コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddress3;
+        protected global::System.Web.UI.WebControls.TextBox txtAddress2;
         
         /// <summary>
-        /// BtnDataReturn コントロール。
+        /// txtAddress3 コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnDataReturn;
+        protected global::System.Web.UI.WebControls.TextBox txtAddress3;
     }
 }

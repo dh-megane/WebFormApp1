@@ -68,7 +68,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="jQuery\AUTHORS.txt" />
+    <Content Include="jQuery\external\jquery\jquery.js" />
+    <Content Include="jQuery\images\ui-icons_444444_256x240.png" />
+    <Content Include="jQuery\images\ui-icons_555555_256x240.png" />
+    <Content Include="jQuery\images\ui-icons_777620_256x240.png" />
+    <Content Include="jQuery\images\ui-icons_777777_256x240.png" />
+    <Content Include="jQuery\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="jQuery\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="jQuery\index.html" />
+    <Content Include="jQuery\jquery-ui.css" />
+    <Content Include="jQuery\jquery-ui.js" />
+    <Content Include="jQuery\jquery-ui.min.css" />
+    <Content Include="jQuery\jquery-ui.min.js" />
+    <Content Include="jQuery\jquery-ui.structure.css" />
+    <Content Include="jQuery\jquery-ui.structure.min.css" />
+    <Content Include="jQuery\jquery-ui.theme.css" />
+    <Content Include="jQuery\jquery-ui.theme.min.css" />
+    <Content Include="jQuery\LICENSE.txt" />
+    <Content Include="JS\common.js" />
+    <Content Include="JS\jquery-ui.min.js" />
+    <Content Include="JS\jquery.js" />
     <Content Include="SAMPLEFRM\FORM1.aspx" />
+    <Content Include="SAMPLEFRM\MAIN.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +102,13 @@
     <Compile Include="SAMPLEFRM\FORM1.aspx.designer.cs">
       <DependentUpon>FORM1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SAMPLEFRM\MAIN.aspx.cs">
+      <DependentUpon>MAIN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAMPLEFRM\MAIN.aspx.designer.cs">
+      <DependentUpon>MAIN.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SAMPLEFRM\SAMPLE.Master.cs">
       <DependentUpon>SAMPLE.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -89,6 +118,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="jQuery\package.json" />
     <None Include="packages.config" />
     <Content Include="SAMPLEFRM\SAMPLE.Master" />
     <None Include="Web.Debug.config">
