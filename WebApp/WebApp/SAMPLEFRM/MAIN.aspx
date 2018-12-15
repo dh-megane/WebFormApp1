@@ -23,5 +23,8 @@
                 </tr>
             </table>
         </div>
+        <div>
+            <asp:Button ID="BtnPrint" runat="server" Text="印刷" OnClick="BtnPrint_Click" />
+        </div>
     </div>
 </asp:Content>

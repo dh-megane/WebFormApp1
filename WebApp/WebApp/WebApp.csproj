@@ -44,6 +44,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ExcelCreator.Creator.v10, Version=10.0.5270.1514, Culture=neutral, PublicKeyToken=e70d0f98050da475, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\ExcelCreator.Creator.v10.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelCreator.Pdf.Creator.v10, Version=10.0.5270.1514, Culture=neutral, PublicKeyToken=e4b6c7625c98a906, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\ExcelCreator.Pdf.Creator.v10.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelCreator.Xlsx.Core.v10, Version=10.0.5270.1514, Culture=neutral, PublicKeyToken=afb069e70259a56a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\ExcelCreator.Xlsx.Core.v10.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelCreator.Xlsx.Creator.v10, Version=10.0.5270.1514, Culture=neutral, PublicKeyToken=a1afcfd03b061a55, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\ExcelCreator.Xlsx.Creator.v10.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -89,6 +105,22 @@
     <Content Include="JS\common.js" />
     <Content Include="JS\jquery-ui.min.js" />
     <Content Include="JS\jquery.js" />
+    <Content Include="Libs\ExcelCreator.CellDesigner.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Creator.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Document.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Html.Creator.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Pdf.Creator.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Shared.v10.dll" />
+    <Content Include="Libs\ExcelCreator.View.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Xls.Core.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Xls.Creator.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Xls.Document.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Xls.View.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Xlsx.Core.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Xlsx.Creator.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Xlsx.CreatorExpress.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Xlsx.Document.v10.dll" />
+    <Content Include="Libs\ExcelCreator.Xlsx.View.v10.dll" />
     <Content Include="SAMPLEFRM\FORM1.aspx" />
     <Content Include="SAMPLEFRM\MAIN.aspx" />
     <Content Include="Web.config" />
@@ -121,6 +153,8 @@
     <Content Include="jQuery\package.json" />
     <None Include="packages.config" />
     <Content Include="SAMPLEFRM\SAMPLE.Master" />
+    <Content Include="TEMPLATE\SampleReport.xlsx" />
+    <Content Include="TEMPLATE\TemplateTotalInvoice.xlsx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -128,9 +162,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TEMPLATE\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
