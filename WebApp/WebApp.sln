@@ -5,6 +5,16 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{718B72C4-F6B9-4942-9606-1900D161473D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCommon", "WebCommon\WebCommon.csproj", "{25ECFE4C-B512-4542-8BD2-889A40276F0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DLL", "DLL", "{007F9325-1632-404C-B35E-B7C991620CFF}"
+	ProjectSection(SolutionItems) = preProject
+		DLL\ExcelCreator.Creator.v10.dll = DLL\ExcelCreator.Creator.v10.dll
+		DLL\ExcelCreator.Pdf.Creator.v10.dll = DLL\ExcelCreator.Pdf.Creator.v10.dll
+		DLL\ExcelCreator.Xlsx.Core.v10.dll = DLL\ExcelCreator.Xlsx.Core.v10.dll
+		DLL\ExcelCreator.Xlsx.Creator.v10.dll = DLL\ExcelCreator.Xlsx.Creator.v10.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,10 @@ Global
 		{718B72C4-F6B9-4942-9606-1900D161473D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{718B72C4-F6B9-4942-9606-1900D161473D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{718B72C4-F6B9-4942-9606-1900D161473D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25ECFE4C-B512-4542-8BD2-889A40276F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25ECFE4C-B512-4542-8BD2-889A40276F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25ECFE4C-B512-4542-8BD2-889A40276F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25ECFE4C-B512-4542-8BD2-889A40276F0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
