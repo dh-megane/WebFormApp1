@@ -13,19 +13,32 @@ namespace WebCommon
     {
         protected Creator creator = new Creator();
 
+        protected string UketukeID { get; }
+        protected string TEMPLATE_FILE_PATH;
+        protected string DOWNLOAD_FILE_PATH;
+        protected string DOWNLOAD_FILE_NAME;
+
+        public string TEMPLATE_DIR_PATH = HttpContext.Current.Server.MapPath("../TEMPLATE/{0}");
+        public string DOWNLOAD_DIR_PATH = HttpContext.Current.Server.MapPath("../TEMPLATE/{0}");
+
+        public BasePrint(string uketukeID, string templateFileName, string downloadFileName)
+        {
+            this.UketukeID = uketukeID;
+            this.TEMPLATE_FILE_PATH = string.Format(TEMPLATE_DIR_PATH, templateFileName);
+            this.DOWNLOAD_FILE_PATH = string.Format(DOWNLOAD_FILE_PATH, downloadFileName);
+            this.DOWNLOAD_FILE_NAME = downloadFileName;
+        }
+
         abstract protected void PrintHeader();
 
         abstract protected void PrintDetail();
 
         abstract protected void PrintFooter();
 
-        public string Print()
+        public void Print()
         {
-            string TEMPLATE_FILE_PATH = HttpContext.Current.Server.MapPath("../TEMPLATE/TemplateTotalInvoice.xlsx");
-            string SAVE_DIR_PATH = HttpContext.Current.Server.MapPath("../TEMPLATE/{0}");
-
             // BOOKをオーバーレイオープン
-            creator.OpenBook(TEMPLATE_FILE_PATH + "SAMPLE.xlsx", TEMPLATE_FILE_PATH);
+            creator.OpenBook("", TEMPLATE_FILE_PATH);
 
             // ヘッダ部印刷
             PrintHeader();
@@ -37,10 +50,28 @@ namespace WebCommon
             PrintFooter();
 
             //【3】Excel ファイルクローズ、PDF出力
-            var save_file_name = $"SAMPLE_{ DateTime.Now.ToString("yyyyMMddhhmmss") }.pdf";
-            creator.CloseBook(true, string.Format(SAVE_DIR_PATH, save_file_name), true);
+            creator.CloseBook(true, DOWNLOAD_FILE_PATH, true);
 
-            return string.Format(SAVE_DIR_PATH, save_file_name);
+        }
+
+        public void FileDownload(HttpResponse res)
+        {
+            // Response情報クリア
+            res.ClearContent();
+            // バッファリング
+            res.Buffer = true;
+            // HTTPヘッダー情報設定
+            res.AddHeader("Content-Disposition", string.Format("attachment;filename={0}", HttpUtility.UrlEncode(DOWNLOAD_FILE_NAME)));
+            res.ContentType = "application/pdf";
+            // ファイル書込
+            res.WriteFile(DOWNLOAD_FILE_PATH);
+            // フラッシュ
+            res.Flush();
+
+            File.Delete(DOWNLOAD_FILE_PATH);
+
+            // レスポンス終了
+            res.End();
         }
 
     }

@@ -32,10 +32,9 @@ namespace WebApp.SAMPLEFRM
 
         protected void BtnPrint_Click(object sender, EventArgs e)
         {
-            var test = new TEST();
-            var fileName = base.ExecPrint(test);
-
-            base.FileDownload(fileName); 
+            string uketukeID = "";
+            CreateConfirmReport(new TEST(uketukeID, "TemplateTotalInvoice.xlsx", Session.SessionID));
+             
         }
     }
 }
