@@ -7,12 +7,36 @@ namespace WebApp.PrintClasses
 {
     public class TEST : BasePrint
     {
+        protected PrintData data;
+
         public TEST(string uketukeID, string templateFileName, string downloadFileName)
             : base(uketukeID, templateFileName, downloadFileName){}
 
+        protected override void GetPrintData()
+        {
+            using (var comodb = new ComDB())
+            {
+                data = new PrintData
+                {
+                    CorpInfo = new EntCorpInfo
+                    {
+                        COMPANY_NM = "",
+                        TELNO = "",
+                        FAXNO = ""
+                    },
+
+                    OrderM = new EntOrderM(),
+
+                    OrderMB = new List<EntOrderMB>()
+
+                };
+            }
+        }
+
         protected override void PrintHeader()
         {
-            base.creator.Cell("B4").Value = "ExcelCreator 2016";
+            creator.Cell("B4").Value = "ExcelCreator 2016";
+            creator.Cell("A1").Value = data.CorpInfo.COMPANY_NM;
         }
 
         protected override void PrintDetail()

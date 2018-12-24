@@ -18,5 +18,10 @@ namespace WebCommon
 
             print.FileDownload(Response);
         }
+
+        protected void CreateConfirmReportLamda(Action<BasePrint> action)
+        {
+
+        }
     }
 }

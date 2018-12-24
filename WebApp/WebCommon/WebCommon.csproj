@@ -42,7 +42,9 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BasePrint.cs" />
+    <Compile Include="ComDB.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="PrintData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ExcelCreator.Creator.v10, Version=10.0.5270.1514, Culture=neutral, PublicKeyToken=e70d0f98050da475, processorArchitecture=MSIL">

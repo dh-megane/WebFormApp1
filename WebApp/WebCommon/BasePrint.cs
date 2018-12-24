@@ -9,6 +9,28 @@ using AdvanceSoftware.ExcelCreator;
 
 namespace WebCommon
 {
+    #region 外部ファイルに定義
+    public class EntOrderM
+    {
+
+    }
+
+    public class EntOrderMB
+    {
+
+    }
+
+    public class EntCorpInfo
+    {
+        public string COMPANY_NM { get; set; }
+        public string TELNO { get; set; }
+        public string FAXNO { get; set; }
+    }
+    #endregion
+
+    /// <summary>
+    /// 帳票作成クラス(処理順番を規定)
+    /// </summary>
     public abstract class BasePrint
     {
         protected Creator creator = new Creator();
@@ -29,6 +51,8 @@ namespace WebCommon
             this.DOWNLOAD_FILE_NAME = downloadFileName;
         }
 
+        abstract protected void GetPrintData();
+
         abstract protected void PrintHeader();
 
         abstract protected void PrintDetail();
@@ -37,6 +61,9 @@ namespace WebCommon
 
         public void Print()
         {
+            // 印刷データ取得
+            GetPrintData();
+
             // BOOKをオーバーレイオープン
             creator.OpenBook("", TEMPLATE_FILE_PATH);
 
@@ -73,6 +100,5 @@ namespace WebCommon
             // レスポンス終了
             res.End();
         }
-
     }
 }
